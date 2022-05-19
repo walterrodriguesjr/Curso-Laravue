@@ -1,0 +1,139 @@
+https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
+
+1-preparando o ambiente 
+	instalado e configurado o laravel 8x
+
+1.1-preparando o ambiente 
+	ok 
+
+1.2-preparando o ambiente  
+	dicas de como usar o artisan 
+
+--------------------------------------------------------------------------------------------------
+2-ROTEAMENTO-criando rotas
+	routes sempre são adicionadas em routes/web ou routes/api
+	pode usar os verbos HTTP: get, post, put, patch, delete, options etc... 
+
+2.1-ROTEAMENTO-rotas com mútiplos verbos HTTP 
+	utiliza o verbo HTTP match, possibilitando a passagem de mais de um verbo HTTP 
+	*não é uma prática comum, e não é recomendável
+
+2.2-ROTEAMENTO-rotas nomeadas 
+	a possibilidade de literalmente dar nome as rotas, possibilitando um link dinamico 
+	ao final da declaração da rota, é inserido: ->name('nomeDaRota'); 
+	para exibir via artisan a lista de rotas: php artisan route:list 
+
+2.3-ROTEAMENTO-redirecionando rotas 
+	 a Route usa o verbo HTTP redirect, em seguida, 2 parametros, a qual seja digitada, para onde irá
+	 o verbo redirect tambem pode ser usado em controller, é um helper global do laravel 
+	 
+2.4-ROTEAMENTO-rotas de visualização 
+	quando o papel da rota é apenas trazer uma view, ela pode ser feita de maneira resumida, não
+		necessitando funções, apenas a URI, e em seguida, o nome da view, aceita parâmetros 
+	
+2.5-ROTEAMENTO-rotas com parâmetros 
+	para passar parametros pelo route, após a URI, entre chaves, passa-se o parametro 
+	os parametros que forem esperados na function, devem ser passados na URI, a não ser que seja delcarados
+		como null 
+
+2.6-ROTEAMENTO-validando parametros 
+	a validação entra na route utilizando o método: where 
+		ex: ->where([
+    'id' => '[0-9]+',
+    'name' => '[A-Za-z]+'
+]);
+
+2.7-ROTEAMENTO-validando parametros globalmente 
+	para tornar um parametro global, devemos acessar app/Providers/RouteServiceProvider.php 
+		dentro da função boot(), declara-se uma Route:: que informará que, toda route com os parametros 
+		ali informados, serão globais. 
+			na route 2.7, pode se notar que, nela não está sendo passado parametro, porem está utilizando 
+				o pattern de RouteServiceProvider.
+
+2.8-ROTEAMENTO-agrupando rotas usando prefixo
+	declara-se uma Route usando o verbo HTTP prefix()e em seguida, o metodo group(), sendo assim, 
+		todas as routes que estiverem dentro de grupo, não necessitam passar URI repetitiva 
+
+2.9-ROTEAMENTO-agrupando rotas com middleware 	
+	o middleware é como uma barreira na rota, que só é possivel passar, caso a exigencia dele seja atendida 
+	no laravel existem middlewares já embutidos, porém, podem ser criadas middlewares customizadas 
+	as middlewares já definidas ficam em app/http/Kernel, caso seja criada uma nova, deve ali ser incluida tambem 
+
+2.10-ROTEAMENTO-agrupando rotas com sub domínios 
+	utiliza o verbo HTTP domain() 
+
+2.11-ROTEAMENTO-fallback 
+	fallback é uma rota que, caso seja digitado um endereço inexistente, é direcionado para a rota de 
+		fallback 
+	é possível também dizer para a rota de fallback mandar para uma view valida, home por exemplo 
+
+2.12-ROTEAMENTO-injeção de dependência 
+	que dizer que tal rota só existe caso uma segunda determinada também exista 
+	no parametro da função desta rota, usa-se a classe Request e já empurra o que tem nela numa variavel 
+		$request, em seguida chamada como parametro no retorno 
+	
+2.13-ROTEAMENTO-injetando model na rota 
+	criado configuração do .env e um banco chamado laravel 
+	criada a Route que acessa a model nativa chamada User 
+	rodada a migrate nativa que vem com laravel 
+	acessada a pasta seeders e em seguida o arquivo DataBaseSeeder.php e descomentado: User::factory(10)->create();
+		para poder liberar a geração de dados fake com o comando artisan a seguir
+		também é preciso inserir a class User no topo, como qualquer outra class em uso
+	usado o comando artisan para popular o bando de dados com dados fake: php artisan migrate --seed
+
+
+--------------------------------------------------------------------------------------------------
+3-MIDDLEWARE-criando e aplicando middlewares 
+	middleware é uma barreira entre requisição e a aplicação, caso suas expectativas não sejam atendidas, 
+		o fluxo será bloqueado 
+	o middleware pode ser criado via cmd artisan 
+		ex: php artisan make:middleware UserAgent
+	dentro do arquivo de middleware gerado, é possivel fazer toda a logica 
+	a class do middleware em questão deve ser registrado em: app/Http/Kernel.php  em $routeMiddleware 
+
+3.1-MIDDLEWARE-aplicando middleware globalmente 
+	foi explicado que, em vez de aplicar uma middleware repetidas vezes em diferentes rotas, é possivel, 
+		após incluir no Kernel.php porem na variavel $middleware do top, torna global a middleware 
+	
+3.2-MIDDLEWARE-aplicando middleware em grupos de rota 
+	atentar sempre na configuração do Kernel.php, se o middleware está global ou individual, o global 
+		pode vir a sobrescrever o individual. Foi criada uma nova middleware, UserAgent2, e dentro dela, 
+			nela foi criado um group() e o middleware aplicada no group() pega todas as routes dentro
+
+3.3-MIDDLEWARE-aplicando múltiplos middlewares 
+	criado um novo middleware, o UserAgent3, em seguida nele foi inserido a logica, e o mesmo 
+		foi inserido no Kernel.php
+	quando é mais de um middleware declarado no grupo, eles são declarados dentro de um array 
+
+3.4-MIDDLEWARE-criando grupos de middleware 
+	maneira mais rápida de criar um middleware de grupos que o anterior  
+	criado um no arquivo no Kernel para inserir em um grupo 
+
+3.5-MIDDLEWARE-classificando prioridade 
+	uma maneira global de declarar a ordem de aplicação dos middleware 
+
+3.6-MIDDLEWARE-recebendo parametros 
+	não muito utilizado
+
+
+--------------------------------------------------------------------------------------------------
+4-CONTROLLERS-criando controllers 
+	
+
+	
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+
+
+
