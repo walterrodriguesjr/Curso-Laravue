@@ -118,6 +118,11 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 
 --------------------------------------------------------------------------------------------------
 4-CONTROLLERS-criando controllers 
+	controlleres servem para controlar a lógica do sistema 
+	faz a intermediação entre requisições do usuário e os dados registrados 
+	criado um novo controller via artisan 
+		ex: php artisan make:controller NomeDoController 
+	
 	
 
 	

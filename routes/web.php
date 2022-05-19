@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -124,6 +125,9 @@ route::middleware(['userAgent2', 'userAgent3'])->group(function () {
         dd('posts4');
     });
 });
+
+/* 4 */
+Route::get('/userControler', [UserController::class, 'index']);
 
 
 
