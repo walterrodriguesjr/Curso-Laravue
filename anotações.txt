@@ -145,7 +145,10 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 		que está sendo chamado na classe __construct
 	
 4.5-CONTROLLERS-controller de ação única 
-	
+	criado um controller CheckoutController, nele criado um metodo __invoke, que não precisa 
+		passar o metodo, e quando chamado na rota, pega direto os dados do controller e manda pra tela 
+
+
 	
 
 
