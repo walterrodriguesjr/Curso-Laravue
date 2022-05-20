@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -129,5 +130,8 @@ route::middleware(['userAgent2', 'userAgent3'])->group(function () {
 /* 4 */
 Route::get('/userControler', [UserController::class, 'index']);
 
+/* 4.1 e 4.2 */
+Route::get('users5/{user}', [UserController::class, 'show']);
 
-
+/* 4.5 */
+Route::get('/checkout', CheckoutController::class);

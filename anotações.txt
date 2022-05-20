@@ -123,7 +123,31 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 	criado um novo controller via artisan 
 		ex: php artisan make:controller NomeDoController 
 	
+4.1-CONTROLLERS-controllers com parametros 
+	foi criada uma rota que acessa o controller UserController, a qual passa parametro de id
+	em seguida, no controller UserController foi criado o método show, o qual passa parametro 
+	 para a ação do dd 
+
+4.2-CONTROLLERS-injeção de dependência 
+	é utilizado no parametro do metodo show, do controller a classe Request e em seguida uma 
+		variavel recebe os dados desta classe, por  convenção essa variavel usa o nome de $request, 
+			mas pode usar qualquer nome. 
+	a classe Request é global, ou seja, pode ser usada em qualquer lugar(route, controller etc)
+
+4.3-CONTROLLERS-injetando model no controller 
+	da mesma forma, a classe do model User foi inserida como parametro no controller UserController, 
+	 em seguida, a classe model foi inserida na variavel $user, e em seguida, chamada a variavel 
+	a partir do momento que a classe User está dentro de uma variavel, a $user, todos os dados 
+		desta classe podem ser acessados 
+
+4.4-CONTROLLERS-aplicando middleware 
+	usando a classe __construct() ela ira abraçar os controllers que irão receber o middleware,
+		que está sendo chamado na classe __construct
 	
+4.5-CONTROLLERS-controller de ação única 
+	
+	
+
 
 	
 
