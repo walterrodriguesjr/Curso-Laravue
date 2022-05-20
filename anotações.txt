@@ -148,6 +148,15 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 	criado um controller CheckoutController, nele criado um metodo __invoke, que não precisa 
 		passar o metodo, e quando chamado na rota, pega direto os dados do controller e manda pra tela 
 
+4.6-CONTROLLERS-Resource controller - criando resources
+	é um padrão para criar um controller que já venha com todos os métodos basicos configurados 
+		ex: php artisan make:controller UserCOntroller2 --resource 
+	em seguida, o referido controller foi deletado, e foi novamente criado e desta vez criando junto o seu model também 
+		php artisan make:controller UserController2 --resource --model=User
+	a rota deste controller foi criada usando o método resource, o qual já conectada com todos os metodos padrao da route. 
+
+
+
 
 	
 

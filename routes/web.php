@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserController2;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -135,3 +136,6 @@ Route::get('users5/{user}', [UserController::class, 'show']);
 
 /* 4.5 */
 Route::get('/checkout', CheckoutController::class);
+
+/* 4.6 */
+Route::resource('users6', UserController2::class);
