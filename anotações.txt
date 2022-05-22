@@ -148,17 +148,33 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 	criado um controller CheckoutController, nele criado um metodo __invoke, que não precisa 
 		passar o metodo, e quando chamado na rota, pega direto os dados do controller e manda pra tela 
 
-4.6-CONTROLLERS-Resource controller - criando resources
-	é um padrão para criar um controller que já venha com todos os métodos basicos configurados 
-		ex: php artisan make:controller UserCOntroller2 --resource 
-	em seguida, o referido controller foi deletado, e foi novamente criado e desta vez criando junto o seu model também 
-		php artisan make:controller UserController2 --resource --model=User
-	a rota deste controller foi criada usando o método resource, o qual já conectada com todos os metodos padrao da route. 
 
+4.6-CONTROLLERS-Resource controller-criando resources 
+	trata-se de uma maneira de criar via artisan, um controler que já virá com todos os métodos 
+		padrão pronto (index, create, update etc...)
+		ex: php artisan make:controller UserController3 --resource
+	existe também um  conando similar, porém já adiciona também o model pronto do controller, 
+		no model, os métodos de fillable já virão prontos, sendo necessário apenas popular 
+			ex:php artisan make:controller UserController4 --resource --model=User 
+	se o controller for criado com resorce, quando for criar a route, não será necessário criar 
+		uma rota para cada método, sendo que uma única resourceela poderá controlar todos os métodos
 
+4.7-CONTROLLERS-Resource controller-definido métodos na rota 
+	a rota do tipo resource pode ser personalizada, ou seja, com o método 'only()' informamos 
+		qual método será utilizado. Caso seja mais de um ,método, deve ser passado em array 
+		pode também umsa o método 'except()', dizendo que gerará todos, menos o informado 
 
+4.8-CONTROLLERS-Resource controller-múltiplos resources 
+	é criado um array dentrou do route resource, passando as URL e os controllers, porem muito 
+		limitado 
+
+4.9-CONTROLLERS-Resource controller-resource para API 
+	utiliza o verbo HTTP 'apiResource'	
+	
 
 	
+			
+
 
 
 	
