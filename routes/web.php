@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserController2;
 use App\Http\Controllers\UserController5;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -143,3 +145,30 @@ Route::resource('users6', UserController2::class)->only(['index', 'destroy']);
 
 /* 4.9 */
 Route::apiResource('users7', UserController5::class);
+
+/* 4.12 */
+Route::resource('posts', PostController::class)->parameters([
+    'posts' => 'admin_post',
+    'comments' => 'admin_comments',
+]);
+
+/* 4.13 */
+Route::resourceVerbs([
+    'create' => 'criar',
+    'edir' => 'editar',
+]);
+
+/* 5 */
+Route::get('user4', function(Request $request) {
+    dd($request);
+});
+
+/* 5.2 */
+/* if($request->hasAny(['token', 'curso'])){
+    dd('Faça algo');
+} */
+
+/* 6 */
+Route::get('prifile', function(){
+    return View::first(['user.profile', 'user.profile_new']);
+});

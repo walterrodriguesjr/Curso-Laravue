@@ -170,6 +170,50 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 
 4.9-CONTROLLERS-Resource controller-resource para API 
 	utiliza o verbo HTTP 'apiResource'	
+
+4.10-CONTROLLERS-Resource controller-aninhando rotas 
+	ok 
+
+4.11-CONTROLLERS-Resource controller-nomeando rotas 
+	usa o método: ->name(['create' => 'usuario.criar', 
+						  'update' => 'usuario.atualizar',
+						  ])
+4.12-CONTROLLERS-Resource controller-renomenando parametros 
+	é recomendável deixar no modo padrão  
+	caso seja muito necessário, utiliza o metodo 'parameters()' e em seguida informa o que será alterado, o como ficará em seguida 
+
+4.13-CONTROLLERS-Resource controller-scope 
+	ok 
+
+4.14-CONTROLLERS-Resource controller-alerando nomes dos métodos 
+	serve para que o nome dos métodos sejam customizados, porem, uma ação não recomendada
+
+4.15-CONTROLLERS-Resource controllers-adicionando rotas extras 
+	ok
+
+
+--------------------------------------------------------------------------------------------------
+5-REQUESTS-acessando dados da url 
+	na propria Route, os dados da class Resource foram passados para a variavel $resorce, e em seguida, exibidos pelo dd()  
+
+5.1-REQUESTS-acessando dados do input 
+	explorando os métodos do $request para captar dados 
+
+5.2-REQUESTS-fazendo checagem nos inputs 
+	meotodos da classe Request que são usados em condicionais para verificação 
+
+
+--------------------------------------------------------------------------------------------------
+6- VIEWS-criando a primeira view 
+	explicando o template engine do laravel, o blade 
+	
+
+
+
+
+
+
+
 	
 
 	
