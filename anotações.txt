@@ -206,6 +206,33 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 --------------------------------------------------------------------------------------------------
 6- VIEWS-criando a primeira view 
 	explicando o template engine do laravel, o blade 
+
+6.1-VIEWS-view e controller 
+	criada a a route de get index e o controller UserCOntroller6 
+
+6.2-VIEWS-passando dados para a view 
+	a passagem de parametro na saida do controller para a route, pode ser passado da maneira convencional (após passar o endereço, vírgula, chaves e o que será passado, ou então, 
+		usa-se o método '->with()'). INformando com o que será passado.
+
+6.3-VIEWS-passando dados para todas as views 
+	uma maneira para passar dados de maneira global para as views 
+		a inclusão é feita em: app/Providers/AppServiceProviders.php 
+		
+6.4-VIEWS-passando dados do banco de dados (spoiler)
+	ensinado a rotida de configurar a .env, a configuração de controller acessando a model 
+
+
+--------------------------------------------------------------------------------------------------
+7-BLADE TEMPLATE-introdução ao blade template 
+	explicação de como utilizar o PHP dentro do blade 
+
+7.1-BLADE TEMPLATE-diretivas para if-else 
+	feito o fluxo de, trrazer dados de tabela para a model, e uma variavel receber esta model em um controller, em seguida, transportar esses dados para a view, atraves de 
+		parametros 
+	
+
+	 
+
 	
 
 

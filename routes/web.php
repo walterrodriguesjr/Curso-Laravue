@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserController2;
 use App\Http\Controllers\UserController5;
+use App\Http\Controllers\UserController6;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -172,3 +173,6 @@ Route::get('user4', function(Request $request) {
 Route::get('prifile', function(){
     return View::first(['user.profile', 'user.profile_new']);
 });
+
+/* 4.1 */
+Route::get('/users6', [UserController6::class, 'index']);
