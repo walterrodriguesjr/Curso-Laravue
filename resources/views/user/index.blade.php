@@ -28,9 +28,38 @@
         Eu não tenho usuários
     @endif
 
-    {{-- @if (count($users) === 1)
+    <br>
+
+    {{-- @if (count($users) === 1) 
         Eu tenho um usuário
     @endif --}}
+
+    @for ($i = 0; $i <= count($users); $i++)
+        {{ $i }}
+    @endfor
+
+    <br>
+
+    @foreach ($users as $user)
+        {{ $user->name }} {{ $user->email }}<br>
+
+        @if ($user->id === 1)
+        @break
+            
+        @endif
+
+    @endforeach
+
+    <br>
+
+    @forelse ($users as $user)
+        {{ $user->name }} {{ $user->email }}<br>
+    @empty
+        Nenhum usuário encontrado
+@endforelse
+
+<br>
+
 
 </body>
 

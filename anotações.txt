@@ -229,7 +229,20 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 7.1-BLADE TEMPLATE-diretivas para if-else 
 	feito o fluxo de, trrazer dados de tabela para a model, e uma variavel receber esta model em um controller, em seguida, transportar esses dados para a view, atraves de 
 		parametros 
+
+7.2-BLADE TEMPLATE-diretivas para loops 
+	realização de ações utilizando 'for', 'foreach', ''unless'(para retornar que nada foi localizado), 'forelse'(permite retornar uma segunda opção(empty)), 'while'
+
+7.3-BLADE TEMPLATE-parando ou continuando o foreach 
+	uso de @vontinue e @break nos foreach 
+
+7.4-BLADE TEMPLATE-variáveis de loop no foreach 
+	explicado a variavel $loop que pode trazer varia informações dentro do foreach 
+
+7.5-BLADE TEMPLATE-diretivas para switch 
+	uso de switch comum do PHP 
 	
+
 
 	 
 
