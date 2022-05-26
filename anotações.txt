@@ -242,6 +242,43 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 7.5-BLADE TEMPLATE-diretivas para switch 
 	uso de switch comum do PHP 
 	
+7.6-BLADE TEMPLATE-incluindo subviews 
+	uso dos @include('o que irá trazer de outro arquivo'). Usado para criação de templates 
+	@includeIf(), que só trará algo, caso exista, se não, apenas não mostra, mas também não trás erro 
+
+7.7-BLADE TEMPLATE-passando dados para as subviews 
+	 mesmo que um componente de @include() seja usado como padrão em toda aplicação, alguns intens do componente podem ser personalizados. 
+	 	ex: @include('heading', [
+			 'title' => 'Usuários',
+		 ]);
+
+7.8-BLADE TEMPLATE-renderizando a lista de usuários1
+	usando foreach com @include()
+
+7.9-BLADE TEMPLATE-renderizando a lista de usuários2 
+	uso de @each, uma diretiva do blade, com uso similar ao foreach, porém menos verboso 
+
+7.10-BLADE TEMPLATE-diretivas para códigos PHP 
+	@php 
+		'código php';
+	@endphp
+	
+--------------------------------------------------------------------------------------------------
+8-BLADE LAYOUTS-criando layouts usando herança de template 
+	padrão tem criar uma tela base do html, e a partirt da necessidade, ir injetando os componentes necessários 
+		cria-se a pasta layouts (na pasta view) e dentro dela a view que terá usada como template 
+
+8.1-BLADE LAYOUTS-criando layouts usando herança de template-2
+	resumindo: 
+		@yield() é o conteúdo principal, indispensável 
+		@section() usa para trazer blocos de suporte, componentes (sidebar, navbar, footer etc...)
+
+
+--------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 	 
