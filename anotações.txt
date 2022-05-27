@@ -275,6 +275,37 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 
 
 --------------------------------------------------------------------------------------------------
+9-BLADE STACKS-criando stacks 
+	@stack() tecnica se assemelha com diretiva @section(), sendo possivel empilha conteudo 
+		posteriormente usa-se o @push() / @endpush() 
+	a @section() só pode ser inserida uma por vez em cada view, enquanto o @stack(),  sendo incluido através do @push(), pode ser incluido varias vezes 
+	o @stack vai no template, e atraves dele, jogamos conteudo para a view, sendo lá recebido com o @push()
+
+9.1-BLADE STACKS-prefixando stacks 
+	o empilhamento segue a ordem sequencial , porem, para que o conteudo va para o topo da pilha, usa-se o @prepend() / @endprepend() 
+
+
+--------------------------------------------------------------------------------------------------
+10.BLADE COMPONENTES-introdução e criando o primeiro componente 
+	 criando uma pasta Components de PHP, dentro da pasta View,  usando o artisan 
+	 	php artisan make:component User 
+
+10.1-BLADE COMPONENTES-renderizando componentes parte 1 
+	explicado as vantagens da componentização, reaproveitamento de código, etc.. 
+
+10.1-BLADE COMPONENTES-renderizando componentes parte 2 
+	ok 
+
+
+
+
+
+		
+
+
+	
+
+
 
 
 
