@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Usuários</h1>
+    <x-user></x-user>
 
     <br>
 

@@ -234,7 +234,7 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 	realização de ações utilizando 'for', 'foreach', ''unless'(para retornar que nada foi localizado), 'forelse'(permite retornar uma segunda opção(empty)), 'while'
 
 7.3-BLADE TEMPLATE-parando ou continuando o foreach 
-	uso de @vontinue e @break nos foreach 
+	uso de @continue e @break nos foreach 
 
 7.4-BLADE TEMPLATE-variáveis de loop no foreach 
 	explicado a variavel $loop que pode trazer varia informações dentro do foreach 
@@ -287,14 +287,19 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 
 --------------------------------------------------------------------------------------------------
 10.BLADE COMPONENTES-introdução e criando o primeiro componente 
-	 criando uma pasta Components de PHP, dentro da pasta View,  usando o artisan 
-	 	php artisan make:component User 
+	o conceito de componentes é poder isolar um bloco do código para reutilizar de maneira independente
+		criar componente: php artisan make:component "nome do componente"
 
-10.1-BLADE COMPONENTES-renderizando componentes parte 1 
-	explicado as vantagens da componentização, reaproveitamento de código, etc.. 
+10.1-BLADE COMPONENTES-renderizando component-parte 1 
+	testando na prática o uso de componentes 
 
-10.1-BLADE COMPONENTES-renderizando componentes parte 2 
-	ok 
+10.2-BLADE COMPONENTES-renderizando component-parte 2 
+	incluindo as classes no controlador do componente
+
+10.3-BLADE COMPONENTES-passando dados para o componente 
+	ok
+ 
+ 
 
 
 
