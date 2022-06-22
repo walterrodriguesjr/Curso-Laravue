@@ -299,10 +299,48 @@ https://drive.google.com/drive/folders/1z4a1hsNrFo5Tftg7KI-VXedubSPp_Gtn
 10.3-BLADE COMPONENTES-passando dados para o componente 
 	ok
  
+10.4-BLADE COMPONENTES-deixando nossos componentes mais flexíveis ainda 
+	ok 
+
+10.5-BLADE COMPONENTES-dois truques sobre atributos 
+	ok 
+
+10.6-BLADE COMPONENTES-criando métodos 
+	ok 
+
+10.7-BLADE COMPONENTES-ocultando atributos ou métodos 
+	ok 
+
+10.8-BLADE COMPONENTES-atributos do componentes 
+	ok 
+
+10.9-BLADE COMPONENTES-mesclando atributos 
+	ok 
+
+10.10-BLADE COMPONENTES-mesclando atributos condicionalmente 
+	ok
+
+10.12-BLADE COMPONENTES-filtrando atributos 
+	ok
  
+10.13-BLADE COMPONENTES-conhecendo os métodos get e has 
+	ok 
+ 
+10.14-BLADE COMPONENTES-slots 
+	ok 
+
+10.15-BLADE COMPONENTES-dando nomes aos slots 
+	ok
+
+10.16-BLADE COMPONENTES-finalizando o componente
+	ok
+
+10.17-BLADE COMPONENTES-scoped slot 
+	ok
 
 
-
+--------------------------------------------------------------------------------------------------
+11-VALIDAÇÃO 
 
 
 		
